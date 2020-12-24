@@ -1,2 +1,2 @@
 # Data-Structures
-Practice of data structures in java
+Practice of Data Structures in Java
