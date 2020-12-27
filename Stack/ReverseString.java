@@ -1,12 +1,12 @@
 import java.util.*;
 
-class Reverse_Stack
+class ReverseString
 {
   public int maxSize; 
   public int[] stackArray;
   public int top; 
 
-  public CQStack(int s) 
+  public ReverseString(int s) 
   {
     maxSize = s; 
     stackArray = new int[maxSize]; 
@@ -47,7 +47,7 @@ class Reverse_Stack
 
 class Main
 {
-static String reverseString(CQStack s, String st)
+static String reverseString(ReverseString s, String st)
 {
   String a=new String();
 	for(int i=0;i<st.length();i++)
@@ -62,7 +62,7 @@ static String reverseString(CQStack s, String st)
 }
 public static void main(String[] args)
   {
-    Reverse_Stack theStack = new Reverse_Stack(100); // make new stack
+    ReverseString theStack = new ReverseString(100); // make new stack
     Scanner s=new Scanner(System.in);
     int t, n, q1, q2;
     String st;
