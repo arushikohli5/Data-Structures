@@ -13,7 +13,7 @@ public class insertion_heap {
         for(int i=0;i<6;i++){
             System.out.println(heap[i]);
         }
-        Insert_max(10);
+        /*Insert_max(10);
         Insert_max(40);
         Insert_max(15);
         Insert_max(30);
@@ -21,22 +21,11 @@ public class insertion_heap {
         Insert_max(35);
         System.out.println("Max Heap-:");
         for(int i=0;i<6;i++){
-            System.out.println(heap[i]);
-        }
+            System.out.println(heapm[i]);
+        }*/
     }
 
     static void Insert_min(int element){
-        heapSize++;
-        heap[heapSize]=element;
-        int now =heapSize;
-        while(heap[(now-1)/2]>element)
-        {
-            heap[now]=heap[(now-1)/2];
-            now=(now-1)/2;
-        }
-        heap[now]=element;
-    }
-    static void Insert_max(int element){
         heapSize++;
         heap[heapSize]=element;
         int now =heapSize;
