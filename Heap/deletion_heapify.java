@@ -15,6 +15,10 @@ public class deletion_heapify {
             System.out.println(heap[i]);
         }
         Delete();
+        System.out.println("new heap:");
+        for(int i=0;i<5;i++){
+            System.out.println(heap[i]);
+        }
     }
 
     static void Insert_min(int element){
@@ -33,32 +37,32 @@ public class deletion_heapify {
         int last=heap[5];
         heap[0]=last;
         heapSize--;
-        heapify(0);
+        heapify(heap,0);
     }
 
-    static void heapify(int i){
-        int least=i;
+    static void heapify(int arr[], int i) 
+    { 
+        int largest = i; 
+        int l = 2 * i + 1;
+        int r = 2 * i + 2; 
         int n=heapSize;
-        int l=least*2+1;
-        int r=least*2+2;
-        if(l<n&&heap[l]<heap[least]);
-        {
-            least=l;
-        }
 
-        if(r<n&&heap[r]<heap[least]);
-        {
-            least=r;
-        }
-
-        if(least!=i){
-            int temp=heap[i];
-            heap[i]=heap[least];
-            heap[least]=temp;
-        }
-
-        heapify(least);
-    }
+        if (l < n && arr[l] < arr[largest]) 
+            largest = l; 
+  
+        
+        if (r < n && arr[r] < arr[largest]) 
+            largest = r; 
+  
+         
+        if (largest != i) { 
+            int swap = arr[i]; 
+            arr[i] = arr[largest]; 
+            arr[largest] = swap; 
+   
+            heapify(arr,largest); 
+        } 
+    } 
 }
 
 
